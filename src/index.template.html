@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>РПКА — Российская парфюмерно-косметическая ассоциация · концепция сайта</title>
+<meta name="description" content="Концепция сайта РПКА: голос косметической отрасли России. Прототип для обсуждения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Display:wght@300;400&display=swap">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  setTimeout(function () { document.documentElement.classList.add('motion-safe-timeout'); }, 4000);
+</script>
+</head>
+<body>
+{{SPRITE}}
+<a class="skip" href="#main">К содержанию</a>
+
+<header class="hdr" data-hdr>
+  <a class="hdr__logo" href="#top" aria-label="РПКА — на главную">
+    {{LOGO_GARNET}}
+    <span class="hdr__name">Российская парфюмерно-косметическая ассоциация</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Основное меню">
+    <a href="#about">Ассоциация</a>
+    <a href="#projects">Проекты</a>
+    <a href="#decisions">Решения</a>
+    <a href="#calendar">Календарь</a>
+    <a href="#news">Медиа</a>
+    <a href="#join" class="nav-cab">Кабинет</a>
+    <a href="#join" class="nav-join">Вступить</a>
+  </nav>
+  <button class="hdr__burger" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>Меню</button>
+</header>
+
+<div class="menu on-dark" id="menu" hidden>
+  <button class="menu__close" type="button" data-menu-close>Закрыть</button>
+  <ul class="menu__list">
+    <li><a href="#about">Ассоциация</a></li>
+    <li><a href="#projects">Проекты</a></li>
+    <li><a href="#decisions">Решения</a></li>
+    <li><a href="#calendar">Календарь</a></li>
+    <li><a href="#news">Медиа</a></li>
+    <li><a href="#join">Вступить</a></li>
+  </ul>
+  <span class="micro">© 1995–2026 РПКА</span>
+</div>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="hero__frame" data-hero-frame>
+    <img class="hero__img" src="assets/img/ph-audience-close.jpg" alt="Участница конференции РПКА снимает доклад на телефон" data-hero-img fetchpriority="high">
+    <div class="hero__shade"></div>
+    <div class="hero__content">
+      <span class="label label--light" data-fade>Российская парфюмерно-косметическая ассоциация</span>
+      <h1 class="hero__title" data-hero-title>Голос косметической<br>отрасли России</h1>
+      <p class="hero__lead" data-fade>Производители, поставщики сырья, учёные и бренды — в одном контуре с регуляторами.</p>
+      <a class="pill-btn" href="#about" data-fade>Об ассоциации <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <dl class="facts" data-fade>
+        <div><dt>С 1995</dt><dd>года — ассоциация отрасли</dd></div>
+        <div><dt><span data-count="7">7</span> проектов</dt><dd>одна платформа</dd></div>
+        <div><dt><span data-count="700">700</span>+</dt><dd>специалистов на конференции 2026</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="statement" id="about">
+  <div><span class="label" data-reveal>Об ассоциации</span></div>
+  <div class="statement__body">
+    <p class="statement__text" data-scrub-words>Тридцать лет общих решений: отрасль договаривается здесь, а мы доносим её позицию до регуляторов.</p>
+    <div class="statement__cols" data-reveal>
+      <p>РПКА объединяет компании полного цикла: от сырья и разработки до производства, дистрибуции и контроля качества.</p>
+      <p>Семь проектов — форум, конференция, премия, экспертиза, энциклопедия, школа и конкурсы — работают как одна система.</p>
+    </div>
+    <div data-reveal><a class="btn" href="#projects"><span class="btn__text">Об ассоциации</span><span class="btn__sq">{{A2}}</span></a></div>
+  </div>
+</section>
+
+<section class="pillars" aria-label="Три опоры ассоциации">
+  <div class="pillars__grid">
+    <article class="pillar pillar--garnet" data-reveal>
+      <span class="pillar__num">01.</span>
+      <div><h3>Голос отрасли</h3><p>Позиция компаний в ЕЭК, Минпромторге, Минэкономразвития, ТПП РФ, МТК 529 и ТК 360.</p></div>
+    </article>
+    <article class="pillar pillar--ink" data-reveal>
+      <span class="pillar__num">02.</span>
+      <div><h3>События и признание</h3><p>Форум, конференция с 1996 года, Премия «Моя косметика» и конкурсы.</p></div>
+    </article>
+    <article class="pillar pillar--powder" data-reveal>
+      <span class="pillar__num">03.</span>
+      <div><h3>Знание</h3><p>CosmetExpert, biorus и онлайн-школа «Наставник».</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="marquee" aria-hidden="true">
+  <div class="marquee__track" data-marquee>
+    <span class="marquee__item"><i>—</i> Голос отрасли <i>—</i> Тридцать лет общих решений</span>
+    <span class="marquee__item"><i>—</i> Голос отрасли <i>—</i> Тридцать лет общих решений</span>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="sec-head">
+    <span class="br" data-reveal>Проекты</span>
+    <div class="sec-head__row">
+      <h2 data-split>Семь проектов — одна система</h2>
+      <a class="sec-head__link" href="#projects">Все проекты <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+  <div class="projects__grid">
+{{PROJECT_CARDS}}
+    <a class="pcard pcard--join" href="#join" data-card>
+      <span class="label">Членство</span>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <h3>Вступить в РПКА</h3>
+        <p>Место в рабочих группах, закрытый контур решений и события ассоциации.</p>
+        <span class="sq sq--lg sq--deep">{{A2}}</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="decisions on-dark" id="decisions">
+  <div class="decisions__panel" data-pin-decisions>
+    <div class="sec-head">
+      <span class="br">Голос отрасли</span>
+      <h2 data-split>Как отрасль принимает решения</h2>
+    </div>
+    <p class="decisions__lead">Каждый вопрос проходит семь шагов — от инициативы до статуса обращения. Членам ассоциации виден весь путь и данные, на открытом сайте — только этапы.</p>
+    <div class="stepper" aria-live="polite">
+      <span class="stepper__count"><b data-step-num>01</b> / 07</span>
+      <span class="stepper__name" data-step-name>Инициатива</span>
+      <span class="stepper__bar"><span class="stepper__fill" data-step-fill></span></span>
+    </div>
+    <table class="pipe">
+      <thead>
+        <tr><th scope="col">Вопрос</th><th scope="col">Где</th><th scope="col"><span class="pipe__legend" data-legend>{{LEGEND}}</span></th><th scope="col" style="text-align: right">Статус</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="pipe__q">Страховые взносы производителей</td><td class="pipe__where">[Ведомство]</td><td><span class="segs" data-target="4">{{SEGS}}</span></td><td class="pipe__stat">[Статус]</td></tr>
+        <tr><td class="pipe__q">[Вопрос: регулирование]</td><td class="pipe__where">[Ведомство]</td><td><span class="segs" data-target="6">{{SEGS}}</span></td><td class="pipe__stat">[Статус]</td></tr>
+        <tr><td class="pipe__q">[Вопрос: стандартизация]</td><td class="pipe__where">МТК 529 · ТК 360</td><td><span class="segs" data-target="2">{{SEGS}}</span></td><td class="pipe__stat">[Статус]</td></tr>
+        <tr><td class="pipe__q">[Вопрос: маркировка]</td><td class="pipe__where">[Ведомство]</td><td><span class="segs" data-target="7">{{SEGS}}</span></td><td class="pipe__stat">[Статус]</td></tr>
+      </tbody>
+    </table>
+    <div class="decisions__foot">
+      <a class="link-sq" href="#decisions"><span class="sq sq--lg">{{A2}}</span>Как устроен механизм</a>
+      <a class="btn btn--light" href="#join"><span class="btn__text">Закрытый контур</span><span class="btn__sq">{{A2}}</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="calendar" id="calendar">
+  <div class="sec-head">
+    <span class="br" data-reveal>Календарь</span>
+    <div class="sec-head__row">
+      <h2 data-split>Ближайшие события</h2>
+      <a class="sec-head__link" href="#calendar">Весь календарь <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Фильтр событий" data-tabs>
+    <button role="tab" aria-selected="true" data-filter="all">Все</button>
+    <button role="tab" aria-selected="false" data-filter="forum">Форум</button>
+    <button role="tab" aria-selected="false" data-filter="conf">Конференция</button>
+    <button role="tab" aria-selected="false" data-filter="award">Премия</button>
+  </div>
+  <div class="events">
+    <a class="event" href="#calendar" data-cat="forum" data-event>
+      <img class="event__img" src="assets/img/ph-talk.jpg" alt="" loading="lazy">
+      <span class="event__date">[ДД] марта 2027</span>
+      <span class="event__title">Форум РПКА</span>
+      <span class="event__sub">Наука и регулирование, бренды</span>
+    </a>
+    <a class="event" href="#calendar" data-cat="conf" data-event>
+      <img class="event__img" src="assets/img/ph-speaker.jpg" alt="" loading="lazy">
+      <span class="event__date">[ДД].[ММ].2027</span>
+      <span class="event__title">Конференция «Взгляд в будущее»</span>
+      <span class="event__sub">С 1996 года</span>
+    </a>
+    <a class="event" href="#calendar" data-cat="award" data-event>
+      <img class="event__img" src="assets/img/mat-award.jpg" alt="" loading="lazy">
+      <span class="event__date">[ДД].[ММ].2027</span>
+      <span class="event__title">Премия «Моя косметика»</span>
+      <span class="event__sub">Финал и церемония</span>
+    </a>
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="sec-head">
+    <span class="br" data-reveal>Медиа</span>
+    <div class="sec-head__row">
+      <h2 data-split>Новости и публикации</h2>
+      <a class="sec-head__link" href="#news">Все материалы <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+  <a class="feature" href="#news" data-reveal>
+    <img class="feature__img" src="assets/img/ph-workshop.jpg" alt="Слепая оценка образцов косметики на мероприятии РПКА" loading="lazy">
+    <div class="feature__body">
+      <div class="feature__meta"><span class="label">Премия</span><span class="date">[ДД].[ММ].2026</span></div>
+      <div><h3>Премия «Моя косметика» 2026: 399 продуктов в 37 номинациях</h3><p>Лучшая косметика российского производства. Голосуют эксперты, потребители и блогеры.</p></div>
+      <div class="feature__go">Читать <span class="sq">{{A2}}</span></div>
+    </div>
+  </a>
+  <div class="news__grid">
+    <a class="ncard ncard--white" href="#news" data-card>
+      <div class="ncard__meta"><span class="label">Конференция</span><span class="date">[ДД].[ММ].2026</span></div>
+      <div class="ncard__foot"><span>Конференция 2026 собрала более 700 специалистов производства и R&amp;D</span><span class="sq">{{A2}}</span></div>
+    </a>
+    <a class="ncard ncard--powder" href="#news" data-card>
+      <div class="ncard__meta"><span class="label">Решения</span><span class="date">[ДД].[ММ].2026</span></div>
+      <div class="ncard__foot"><span>[Позиция ассоциации по страховым взносам: статус обращения]</span><span class="sq">{{A2}}</span></div>
+    </a>
+    <a class="ncard ncard--ink on-dark" href="#news" data-card>
+      <div class="ncard__meta"><span class="label">Обучение</span><span class="date">[ДД].[ММ].2026</span></div>
+      <div class="ncard__foot"><span>[Новый курс «Наставника»]</span><span class="sq">{{A2}}</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="join on-dark" id="join">
+  <div class="join__panel" data-join>
+    <div>
+      <h2 data-split>Вступить в&nbsp;ассоциацию</h2>
+      <p class="join__lead">Расскажите о компании — пришлём условия членства и пригласим на встречу.</p>
+      <div class="join__contact"><span class="micro">Общий контакт</span><span style="font-size: 20px">[E-mail]</span></div>
+    </div>
+    <form class="form" action="#" onsubmit="return false">
+      <div class="field"><label class="micro" for="f-co">Компания</label><input id="f-co" name="company" autocomplete="organization"></div>
+      <div class="field"><label class="micro" for="f-sp">Сфера</label><input id="f-sp" name="sphere" placeholder="Производство, сырьё, дистрибуция…"></div>
+      <div class="field"><label class="micro" for="f-nm">Имя</label><input id="f-nm" name="name" autocomplete="name"></div>
+      <div class="field"><label class="micro" for="f-ml">E-mail</label><input id="f-ml" name="email" type="email" autocomplete="email"></div>
+      <div class="field field--full"><label class="micro" for="f-msg">Сообщение</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+      <div class="form__foot">
+        <label class="check"><input type="checkbox"> Согласен на обработку персональных данных</label>
+        <button class="btn btn--light" type="submit"><span class="btn__text">Отправить</span><span class="btn__sq">{{A2}}</span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr on-dark">
+  <div class="ftr__panel">
+    <div class="ftr__cols">
+      <div><span class="micro">Проекты</span><ul><li><a href="#projects">Форум</a></li><li><a href="#projects">Конференция</a></li><li><a href="#projects">Премия</a></li><li><a href="#projects">Конкурсы</a></li></ul></div>
+      <div><span class="micro">Знание</span><ul><li><a href="#projects">biorus</a></li><li><a href="#projects">CosmetExpert</a></li><li><a href="#projects">«Наставник»</a></li></ul></div>
+      <div><span class="micro">Ассоциация</span><ul><li><a href="#about">О РПКА</a></li><li><a href="#decisions">Голос отрасли</a></li><li><a href="#join">Вступить</a></li><li><a href="concept.html">Документ концепции</a></li></ul></div>
+      <div><span class="micro">Связь</span><ul><li>[Адрес]</li><li>[Телефон]</li><li>[E-mail]</li></ul></div>
+    </div>
+    <div class="ftr__brand" data-ftr-brand>
+      {{LOGO_FOOTER}}
+      <span class="ftr__word" data-ftr-word aria-label="РПКА">РПКА</span>
+    </div>
+    <div class="ftr__bottom micro"><span>© 1995–2026 Российская парфюмерно-косметическая ассоциация</span><span>Концепция сайта · прототип для обсуждения</span></div>
+  </div>
+</footer>
+
+<a class="doc-pill" href="concept.html" aria-label="Как это устроено — документ концепции"><b>Как это устроено</b> <span><svg class="arrow" aria-hidden="true" style="width: 14px; height: 14px"><use href="#i-arrow"/></svg></span></a>
+
+<script src="vendor/lenis.min.js" defer></script>
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="vendor/SplitText.min.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

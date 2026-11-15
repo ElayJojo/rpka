@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>РПКА — документ концепции сайта</title>
+<meta name="description" content="Как устроена концепция сайта РПКА: путь к решению, токены, цвет по Иттену, типографика, движение, структура главной.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Display:wght@300;400&display=swap">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/doc.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<script>
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+</script>
+</head>
+<body>
+{{SPRITE}}
+
+<header class="dhdr">
+  <a class="dhdr__logo" href="index.html" aria-label="К прототипу сайта">{{LOGO_GARNET}}<span>Документ концепции</span></a>
+  <a class="dbtn" href="index.html">Открыть прототип <span><svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+</header>
+
+<div class="dwrap">
+  <nav class="toc" aria-label="Разделы документа" data-toc>
+    <p class="dlabel">Содержание</p>
+    <ol>
+      <li><a href="#s-about">О документе</a></li>
+      <li><a href="#s-task">Задача</a></li>
+      <li><a href="#s-path">Путь к концепции</a></li>
+      <li><a href="#s-refs">Что взяли у референсов</a></li>
+      <li><a href="#s-type">Типографика</a></li>
+      <li><a href="#s-color">Цвет по Иттену</a></li>
+      <li><a href="#s-form">Форма и сетка</a></li>
+      <li><a href="#s-comp">Компоненты</a></li>
+      <li><a href="#s-motion">Движение и скролл</a></li>
+      <li><a href="#s-page">Структура главной</a></li>
+      <li><a href="#s-next">Что дальше</a></li>
+      <li><a href="#s-tech">Техника</a></li>
+    </ol>
+  </nav>
+
+  <main class="doc">
+    <section class="dhero">
+      <p class="dlabel">РПКА · концепция D · ноябрь 2026</p>
+      <h1>Голос отрасли — <br>спокойно, точно, дорого</h1>
+      <p class="dlead">Документ объясняет, из чего собрана концепция сайта Российской парфюмерно-косметической ассоциации: какие решения приняты, откуда они взяты и по каким правилам их развивать дальше. Прототип живёт рядом — каждое правило здесь можно проверить на странице.</p>
+      <div class="dmeta">
+        <div><span class="dlabel">Статус</span><b>Прототип для обсуждения</b></div>
+        <div><span class="dlabel">Основа</span><b>Integrated Bio · Neko Health · Servercore</b></div>
+        <div><span class="dlabel">Стек</span><b>HTML · CSS · GSAP · Lenis</b></div>
+      </div>
+    </section>
+
+    <section id="s-about" class="dsec" data-dsec>
+      <p class="dnum">01</p>
+      <h2>О документе</h2>
+      <p>Это рабочий прототип главной страницы и его описание. Тексты, даты и цифры в квадратных скобках — заглушки: <code>[ДД].[ММ].2026</code>, <code>[Ведомство]</code>, <code>[Статус]</code>. Фотографии взяты из архива мероприятий РПКА и стоят как пример кадра, а не финальный продакшн. Иконки направлений — третья итерация объёмных знаков из предыдущих раундов.</p>
+      <p>Страница закрыта от поисковиков (<code>noindex</code> и <code>robots.txt</code>), но доступна по прямой ссылке.</p>
+    </section>
+
+    <section id="s-task" class="dsec" data-dsec>
+      <p class="dnum">02</p>
+      <h2>Задача</h2>
+      <p>РПКА — ассоциация с 1995 года: она объединяет производителей, поставщиков сырья, дистрибьюторов, учёных и бренды и представляет их позицию перед регуляторами. Вокруг неё — семь проектов: форум, конференция, премия «Моя косметика», biorus, CosmetExpert, онлайн-школа «Наставник» и конкурсы.</p>
+      <div class="dgrid3">
+        <div class="dcard"><span class="dlabel">Серьёзность</span><p>Сайт говорит с министерствами и советами директоров. Он должен выглядеть как институт, а не как ивент-агентство.</p></div>
+        <div class="dcard"><span class="dlabel">Отрасль</span><p>Это всё-таки красота и косметика: нужен тёплый, телесный, «дорогой» тон, а не синий корпоратив.</p></div>
+        <div class="dcard"><span class="dlabel">Система</span><p>Семь проектов с разными аудиториями должны читаться как одна платформа, а не семь отдельных сайтов.</p></div>
+      </div>
+    </section>
+
+    <section id="s-path" class="dsec" data-dsec>
+      <p class="dnum">03</p>
+      <h2>Путь к концепции</h2>
+      <p>Концепция D появилась после трёх кругов поиска. Первые два дали понятное «нет» — и это сузило направление.</p>
+      <ol class="dsteps">
+        <li><span class="dlabel">Круг 1 · отклонён</span><b>Три концепции по одобренным раньше кейсам</b><p>Разбор токенов, три направления. Итог: «ничего не нравится» — слишком узнаваемо и шаблонно.</p></li>
+        <li><span class="dlabel">Круг 2 · отклонён</span><b>Шире по референсам</b><p>Итог: «всё не то». Запрос уточнился — серьёзно, аккуратно, дорого, ближе к биотеху и премиальным брендам.</p></li>
+        <li><span class="dlabel">Круг 3 · выбран</span><b>Integrated Bio, Neko Health, Servercore</b><p>Строгая сетка, крупная антиква на воздухе, фото как продукт, моноширинные метки. Реакция: «гораздо лучше, считывается серьёзность».</p></li>
+        <li><span class="dlabel">Правка</span><b>Гранат ведёт, Васаби — искра</b><p>Жёлто-зелёный слишком перетягивал внимание. Баланс пересчитан по Иттену: гранат — основной цвет, Васаби остался сигналом.</p></li>
+      </ol>
+    </section>
+
+    <section id="s-refs" class="dsec" data-dsec>
+      <p class="dnum">04</p>
+      <h2>Что взяли у референсов</h2>
+      <p>Мы не копируем сайты, а забираем приёмы, которые отвечают за ощущение «серьёзно и дорого». Каждый приём — с понятной причиной.</p>
+      <div class="dtable" role="table">
+        <div class="dtr dth" role="row"><span>Источник</span><span>Приём</span><span>Как в РПКА</span></div>
+        <div class="dtr" role="row"><span>Integrated Bio</span><span>Плавный скролл, раскрытие фото рамкой, построчное появление заголовков, приглушённая палитра</span><span>Lenis с теми же параметрами, hero раскрывается из скруглённой рамки, заголовки идут строками из-под маски</span></div>
+        <div class="dtr" role="row"><span>Neko Health</span><span>Тёплый светлый фон, медицинская аккуратность, крупные фотографии людей, мало элементов на экране</span><span>Фон «Облако» и «Пудра», фото мероприятий как главный материал, по одной мысли на экран</span></div>
+        <div class="dtr" role="row"><span>Servercore</span><span>Моноширинные метки, скобки, нумерация шагов, таблицы и данные как часть эстетики</span><span>IBM Plex Mono в метках, <code>[ скобки ]</code>, счётчик шагов 01/07 и «трубопровод» решений</span></div>
+      </div>
+    </section>
+
+    <section id="s-type" class="dsec" data-dsec>
+      <p class="dnum">05</p>
+      <h2>Типографика: голос, дела, метки</h2>
+      <p>Три гарнитуры — три роли. Их нельзя смешивать внутри одной роли: тогда шрифт сам подсказывает, что перед вами — позиция, факт или служебная метка.</p>
+      <div class="dtype">
+        <div class="dtype__row"><span class="dlabel">Голос · Noto Serif Display 300</span><p class="sp-serif">Голос косметической отрасли</p><small>Заголовки и крупные высказывания. Тонкое начертание, межстрочный 1.0–1.1, никогда не жирное.</small></div>
+        <div class="dtype__row"><span class="dlabel">Дела · Golos Text 400/500</span><p class="sp-sans">Тридцать лет общих решений</p><small>Интерфейс, текст, карточки, формы. Российский гротеск с хорошей кириллицей.</small></div>
+        <div class="dtype__row"><span class="dlabel">Метки · IBM Plex Mono 400</span><p class="sp-mono">[ С 1996 ГОДА ] · 05 / 07 ПОЗИЦИЯ</p><small>Капс, разрядка 0.04em, 11–13 px. Даты, статусы, номера шагов, категории.</small></div>
+      </div>
+      <div class="dscale">
+        <span>Display 52–96</span><span>H2 40–64</span><span>Statement 32–52</span><span>H3 26–32</span><span>Card 24</span><span>Lead 18</span><span>Body 16</span><span>Label 13</span><span>Micro 11</span>
+      </div>
+      <p class="dnote">Все шрифты — Google Fonts (OFL), лицензионно чистые для прототипа. Если бренд-бук закрепит коммерческие гарнитуры, роли и шкала останутся теми же.</p>
+    </section>
+
+    <section id="s-color" class="dsec" data-dsec>
+      <p class="dnum">06</p>
+      <h2>Цвет по Иттену</h2>
+      <p>Гранат (красно-фиолетовый) и Васаби (жёлто-зелёный) стоят на круге Иттена друг напротив друга — это дополнительная пара. Такая пара всегда даёт максимальное напряжение, поэтому важно, кто из них хозяин.</p>
+      <div class="dprop" aria-label="Пропорции палитры">
+        <i style="flex: 60; background: var(--bg)"><b>Облако 60%</b></i>
+        <i style="flex: 15; background: var(--powder)"><b>Пудра 15%</b></i>
+        <i style="flex: 15; background: var(--garnet); color: #fff"><b>Гранат 15%</b></i>
+        <i style="flex: 8; background: var(--ink); color: #fff"><b>Слива 8%</b></i>
+        <i style="flex: 2; background: var(--spark)"></i>
+      </div>
+      <div class="dswatch">
+        <div><i style="background: #F5F3EF"></i><b>Облако</b><code>#F5F3EF</code><small>Фон, воздух</small></div>
+        <div><i style="background: #E9D7D0"></i><b>Пудра</b><code>#E9D7D0</code><small>Панели, тепло</small></div>
+        <div><i style="background: #7D0A2A"></i><b>Гранат</b><code>#7D0A2A</code><small>Бренд, действие</small></div>
+        <div><i style="background: #3E0813"></i><b>Глубокий гранат</b><code>#3E0813</code><small>Тёмные секции</small></div>
+        <div><i style="background: #2E1620"></i><b>Слива</b><code>#2E1620</code><small>Текст</small></div>
+        <div><i style="background: #DCE45A"></i><b>Васаби</b><code>#DCE45A</code><small>Искра ≤ 2%</small></div>
+      </div>
+      <h3>Почему Васаби должен быть маленьким</h3>
+      <p>По Гёте светлота жёлто-зелёного примерно в 1,5–2 раза выше, чем у красно-фиолетового. Гармоничное равновесие пары — около 3 : 5 по площади (Васаби : гранат). Мы сознательно ломаем его до 2 : 15 — это «контраст количества»: маленькое светлое пятно на большом тёмном поле читается как сигнал, а не как фон.</p>
+      <div class="dgrid3">
+        <div class="dcard"><span class="dlabel">Можно</span><p>Точки у меток на тёмном, стрелка внутри кнопки, заполнение «трубопровода» решений, активный шаг.</p></div>
+        <div class="dcard"><span class="dlabel">Нельзя</span><p>Фоны, крупный текст, заливка кнопок, Васаби на светлом фоне (теряет контраст и выглядит грязно).</p></div>
+        <div class="dcard"><span class="dlabel">Направления</span><p>У каждого проекта своя тройка: глубокий · основной · светлый. Они живут только в карточках и на страницах проектов.</p></div>
+      </div>
+    </section>
+
+    <section id="s-form" class="dsec" data-dsec>
+      <p class="dnum">07</p>
+      <h2>Форма и сетка</h2>
+      <div class="dradii">
+        <div><i style="border-radius: 8px"></i><b>8</b><small>кнопки</small></div>
+        <div><i style="border-radius: 12px"></i><b>12</b><small>карточки</small></div>
+        <div><i style="border-radius: 20px"></i><b>20</b><small>фото</small></div>
+        <div><i style="border-radius: 28px"></i><b>28</b><small>блоки</small></div>
+        <div><i style="border-radius: 999px"></i><b>999</b><small>пилюли</small></div>
+      </div>
+      <p>Сетка — 12 колонок с отступом по краю <code>clamp(16px, 3.33vw, 48px)</code> и шагом 20 px. Тёмные блоки почти касаются краёв экрана (отступ 6–12 px) — так они выглядят как «листы», вложенные в страницу. Между секциями 80–120 px воздуха.</p>
+    </section>
+
+    <section id="s-comp" class="dsec" data-dsec>
+      <p class="dnum">08</p>
+      <h2>Компоненты</h2>
+      <div class="dcomp">
+        <div class="dcomp__item"><div class="dcomp__demo"><a class="dbtn dbtn--g" href="#s-comp">Об ассоциации <span><svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></div><b>Кнопка-пара</b><p>Капсула с текстом + квадрат со стрелкой. При наведении стрелка уезжает и возвращается — приём Integrated Bio.</p></div>
+        <div class="dcomp__item"><div class="dcomp__demo"><span class="sp-mono dlabel--dot">Об ассоциации</span></div><b>Метка</b><p>Моно-капс с точкой граната. На тёмном точка становится Васаби.</p></div>
+        <div class="dcomp__item"><div class="dcomp__demo"><span class="sp-mono">[ Энциклопедия ]</span></div><b>Скобки</b><p>Тег категории в карточке проекта. Скобки вместо плашек — легче и строже.</p></div>
+        <div class="dcomp__item"><div class="dcomp__demo dcomp__demo--dark"><span class="dsegs"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></div><b>Трубопровод</b><p>Семь сегментов пути вопроса — от инициативы до обращения. Единственное место, где Васаби занимает заметную длину.</p></div>
+      </div>
+    </section>
+
+    <section id="s-motion" class="dsec" data-dsec>
+      <p class="dnum">09</p>
+      <h2>Движение и скролл</h2>
+      <p>Принцип: движение подтверждает смысл, а не развлекает. Всё медленное, с длинным «хвостом» замедления; ничего не прыгает и не крутится. Параметры сняты с кода Integrated Bio и других сильных кейсов, затем подогнаны под РПКА.</p>
+      <div class="dtable dtable--motion" role="table">
+        <div class="dtr dth" role="row"><span>Где</span><span>Что происходит</span><span>Параметры</span><span>Источник</span></div>
+        <div class="dtr" role="row"><span>Вся страница</span><span>Инерционный скролл, синхронизированный с анимациями</span><span><code>Lenis lerp 0.1 · duration 1.2</code>, якоря со смещением −72 px</span><span>Integrated Bio</span></div>
+        <div class="dtr" role="row"><span>Hero</span><span>Фото раскрывается из скруглённой рамки, кадр «успокаивается» из увеличения</span><span><code>clip-path inset(10% 8%) → 0</code>, 1.6 s, expo.inOut; scale 1.25 → 1</span><span>Integrated Bio</span></div>
+        <div class="dtr" role="row"><span>Заголовки</span><span>Строки выезжают снизу из-под маски</span><span><code>SplitText lines, yPercent 110 → 0</code>, шаг 0.08 s, expo.out</span><span>Integrated Bio, Locomotive</span></div>
+        <div class="dtr" role="row"><span>Высказывание</span><span>Слова «проявляются» по мере чтения</span><span>opacity 0.16 → 1, привязано к скроллу (scrub)</span><span>Apple, Integrated Bio</span></div>
+        <div class="dtr" role="row"><span>Решения</span><span>Блок закрепляется, скролл проводит вопрос по семи шагам</span><span><code>pin</code> на 140% высоты, счётчик 01/07, линия scaleX</span><span>Servercore, Linear</span></div>
+        <div class="dtr" role="row"><span>Бегущая строка</span><span>Едет постоянно, ускоряется от скорости скролла и меняет направление</span><span>xPercent −50 за 38 s, timeScale от velocity с затуханием</span><span>Integrated Bio, Studio Freight</span></div>
+        <div class="dtr" role="row"><span>Карточки</span><span>Появляются пачками; знак слегка следует за курсором</span><span>ScrollTrigger.batch, y 40 → 0; quickTo ±10 px только для мыши</span><span>Neko Health</span></div>
+        <div class="dtr" role="row"><span>События</span><span>Фото «поднимаются» шторкой, внутри — параллакс</span><span>clip-path inset(100% 0 0 0) → 0, yPercent −8 → 8</span><span>Integrated Bio</span></div>
+        <div class="dtr" role="row"><span>Подвал</span><span>Слово «РПКА» собирается по буквам</span><span>chars yPercent 100 → 0, шаг 0.04 s</span><span>Servercore</span></div>
+        <div class="dtr" role="row"><span>Шапка</span><span>Прячется при скролле вниз, возвращается при скролле вверх</span><span>translateY, 0.4 s</span><span>стандарт</span></div>
+      </div>
+      <h3>Доступность движения</h3>
+      <p>Если в системе включено «уменьшение движения», анимации не запускаются: контент показывается сразу, скролл нативный, трубопровод сразу заполнен. Если скрипты не загрузились за 4 секунды — страница тоже раскрывается целиком. Закрепление блока «Решения» работает только на широких экранах; на телефоне шаги проигрываются один раз при появлении.</p>
+    </section>
+
+    <section id="s-page" class="dsec" data-dsec>
+      <p class="dnum">10</p>
+      <h2>Структура главной</h2>
+      <ol class="dmap">
+        <li><b>Hero</b><span>Позиционирование и три факта: с 1995, 7 проектов, 700+ специалистов</span></li>
+        <li><b>Об ассоциации</b><span>Высказывание и три опоры: голос отрасли, события, знание</span></li>
+        <li><b>Бегущая строка</b><span>Ритм-пауза между смысловыми блоками</span></li>
+        <li><b>Проекты</b><span>Семь направлений + карточка вступления</span></li>
+        <li><b>Как отрасль принимает решения</b><span>Путь вопроса в семь шагов; открыто — этапы, участникам — данные</span></li>
+        <li><b>Ближайшие события</b><span>Фильтр по типу: форум, конференция, премия</span></li>
+        <li><b>Новости и публикации</b><span>Главный материал + три карточки по рубрикам</span></li>
+        <li><b>Вступить</b><span>Короткая форма заявки</span></li>
+        <li><b>Подвал</b><span>Навигация по проектам и крупный логотип</span></li>
+      </ol>
+    </section>
+
+    <section id="s-next" class="dsec" data-dsec>
+      <p class="dnum">11</p>
+      <h2>Что дальше</h2>
+      <div class="dgrid3">
+        <div class="dcard"><span class="dlabel">Контент</span><p>Реальные даты, статусы обращений, цифры. Тексты для каждой опоры и проекта.</p></div>
+        <div class="dcard"><span class="dlabel">Фото</span><p>Съёмка в единой манере: тёплый свет, малая глубина резкости, люди за работой. Ретушь под палитру.</p></div>
+        <div class="dcard"><span class="dlabel">Страницы</span><p>Шаблон проекта (своя тройка цвета), страница события, раздел решений, медиа.</p></div>
+        <div class="dcard"><span class="dlabel">Закрытый контур</span><p>Кабинет участника: полные данные по вопросам, документы, голосования рабочих групп.</p></div>
+        <div class="dcard"><span class="dlabel">CMS</span><p>Перенос на систему управления: новости, события и статусы правит редакция без разработчика.</p></div>
+        <div class="dcard"><span class="dlabel">Проверки</span><p>Доступность (контраст, клавиатура), скорость на мобильных, юридические тексты формы.</p></div>
+      </div>
+    </section>
+
+    <section id="s-tech" class="dsec" data-dsec>
+      <p class="dnum">12</p>
+      <h2>Техника</h2>
+      <p>Статический сайт без сборки на стороне хостинга: HTML, CSS-переменные и два скрипта. Библиотеки лежат в репозитории, а не на CDN, — прототип не зависит от внешних сервисов, кроме шрифтов.</p>
+      <ul class="dlist">
+        <li><code>assets/css/tokens.css</code> — все токены: цвет, шрифты, шкала, радиусы, сетка, кривые</li>
+        <li><code>assets/css/site.css</code> — компоненты и секции</li>
+        <li><code>assets/js/site.js</code> — вся анимация и скролл</li>
+        <li><code>vendor/</code> — GSAP 3 (ScrollTrigger, SplitText) и Lenis</li>
+        <li><code>src/</code> — шаблоны и <code>build.py</code>, который вставляет логотип и карточки</li>
+      </ul>
+      <p class="dnote">Кривая по умолчанию — <code>cubic-bezier(0.16, 1, 0.3, 1)</code> (expo.out): быстрый старт и очень мягкая остановка. Её же используют переходы в CSS.</p>
+    </section>
+
+    <footer class="dftr">
+      <a class="dbtn dbtn--g" href="index.html">Вернуться к прототипу <span><svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      <span class="dlabel">© 1995–2026 Российская парфюмерно-косметическая ассоциация · прототип для обсуждения</span>
+    </footer>
+  </main>
+</div>
+
+<script src="vendor/lenis.min.js" defer></script>
+<script src="vendor/gsap.min.js" defer></script>
+<script src="vendor/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/doc.js" defer></script>
+</body>
+</html>

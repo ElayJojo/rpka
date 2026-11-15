@@ -1,0 +1,67 @@
+/* РПКА · токены концепции D
+   Гранат ведёт, Васаби — искра (≤2% площади, только на тёмном и в сигналах) */
+:root {
+  /* Цвет */
+  --bg: #F5F3EF;          /* Облако — фон, ~60% */
+  --panel: #EFE6E2;       /* светлая Пудра — панели */
+  --powder: #E9D7D0;      /* Пудра, ~15% */
+  --ink: #2E1620;         /* Слива — текст и тёмное, ~8% */
+  --ink-80: rgba(46, 22, 32, 0.8);
+  --ink-70: rgba(46, 22, 32, 0.7);
+  --mute: rgba(46, 22, 32, 0.56);
+  --line: rgba(46, 22, 32, 0.12);
+  --garnet: #7D0A2A;      /* Гранат — бренд и действие, ~15% вместе с глубоким */
+  --garnet-d: #5C0720;
+  --deep: #3E0813;        /* глубокий гранат — тёмные секции */
+  --deeper: #2A0A12;
+  --spark: #DCE45A;       /* Васаби — искра */
+  --white: #FFFFFF;
+  --on-dark-70: rgba(255, 255, 255, 0.72);
+  --on-dark-50: rgba(255, 255, 255, 0.5);
+  --on-dark-line: rgba(255, 255, 255, 0.14);
+
+  /* Направления: глубокий · основной · светлый */
+  --forum-d: #4A0E24;   --forum: #B5174F;   --forum-l: #F4C9D2;
+  --conf-d: #0B3B3A;    --conf: #0E5E5C;    --conf-l: #CFE6DF;
+  --award-d: #3B2410;   --award: #C8902A;   --award-l: #F2E1BE;
+  --bio-d: #2E3A12;     --bio: #8E9C1F;     --bio-l: #E4E7C4;
+  --expert-d: #121C4F;  --expert: #263A9A;  --expert-l: #D6DDF2;
+  --mentor-d: #5A2116;  --mentor: #D9552B;  --mentor-l: #F6D3BC;
+  --contest-d: #2A1238; --contest: #5E2A7A; --contest-l: #E2D2EE;
+
+  /* Шрифты: голос · дела · метки */
+  --f-serif: 'Noto Serif Display', Georgia, 'Times New Roman', serif;
+  --f-sans: 'Golos Text', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Шкала */
+  --t-display: clamp(52px, 6.7vw, 96px);
+  --t-h2: clamp(40px, 4.45vw, 64px);
+  --t-statement: clamp(32px, 3.6vw, 52px);
+  --t-h3: clamp(26px, 2.2vw, 32px);
+  --t-card: 24px;
+  --t-lead: 18px;
+  --t-body: 16px;
+  --t-small: 15px;
+  --t-label: 13px;
+  --t-micro: 11px;
+
+  /* Форма */
+  --r-btn: 8px;
+  --r-card: 12px;
+  --r-photo: 20px;
+  --r-block: 28px;
+  --r-pill: 999px;
+
+  /* Сетка */
+  --pad: clamp(16px, 3.33vw, 48px);
+  --edge: clamp(6px, 0.83vw, 12px);
+  --gap: 20px;
+  --section: clamp(80px, 8.3vw, 120px);
+
+  /* Движение */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
+  --t-fast: 0.2s;
+  --t-base: 0.6s;
+}
